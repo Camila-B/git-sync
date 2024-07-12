@@ -182,6 +182,9 @@ function docker_signal() {
 # tags are system-global, but one might have multiple repos checked out.
 E2E_TAG=$(git rev-parse --show-toplevel | sed 's|/|_|g')
 
+echo "*TAG"
+echo $E2E_TAG
+
 # Setting IMAGE forces the test to use a specific image instead of the current
 # tree.
 IMAGE="${IMAGE:-"e2e/git-sync:${E2E_TAG}__$(go env GOOS)_$(go env GOARCH)"}"
