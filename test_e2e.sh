@@ -187,7 +187,8 @@ echo $E2E_TAG
 
 # Setting IMAGE forces the test to use a specific image instead of the current
 # tree.
-IMAGE="${IMAGE:-"e2e/git-sync:${E2E_TAG}__$(go env GOOS)_$(go env GOARCH)"}"
+#IMAGE="${IMAGE:-"e2e/git-sync:${E2E_TAG}__$(go env GOOS)_$(go env GOARCH)"}"
+IMAGE="gcr.io/k8s-staging-git-sync/git-sync:v4.2.4__linux_arm64"
 echo "*IMAGE"
 echo $IMAGE
 
