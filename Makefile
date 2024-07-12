@@ -48,8 +48,6 @@ ARCH := $(if $(GOARCH),$(GOARCH),$(shell go env GOARCH))
 BASEIMAGE ?= registry.k8s.io/build-image/debian-base:bookworm-v1.0.2
 
 IMAGE := $(REGISTRY)/$(BIN)
-echo "**IMAGE"
-echo $IMAGE
 TAG := $(VERSION)
 OS_ARCH_TAG := $(TAG)__$(OS)_$(ARCH)
 
