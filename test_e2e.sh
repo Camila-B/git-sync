@@ -185,6 +185,8 @@ E2E_TAG=$(git rev-parse --show-toplevel | sed 's|/|_|g')
 # Setting IMAGE forces the test to use a specific image instead of the current
 # tree.
 IMAGE="${IMAGE:-"e2e/git-sync:${E2E_TAG}__$(go env GOOS)_$(go env GOARCH)"}"
+echo "***IMAGE"
+echo $IMAGE
 
 # DIR is the directory in which all this test's state lives.
 RUNID="${RANDOM}${RANDOM}"
